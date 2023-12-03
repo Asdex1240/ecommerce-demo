@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+      
+      <div class="col-md-6" style="margin-top: 20px;">
+        <div class="container">
+            <div class="row">
+              
+                <form>
+                  <!-- Nombre -->
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                  </div>
+          
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+          
+                  <!-- Mensaje -->
+                  <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                  </div>
+          
+                  <!-- Botón de enviar -->
+                  <button type="submit" class="btn btn-dark btn-block">Enviar</button>
+                </form>
+            </div>
+          </div>
+          
+      </div>
+  
+      <!-- Segunda columna -->
+      <div class="col-md-6">
+        
+        <div>
+            <div class="social">
+                <div class="item" *ngFor="let social of sociales">
+                    <a href="{{social.link}}" class="social-icon text-dark fs-1 "><i class="fab fa-{{social.icon}}"></i></a>
+                </div>    
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
