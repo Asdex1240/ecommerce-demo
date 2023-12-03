@@ -11,22 +11,22 @@ export class CategoriesService {
     {
       img: '../../../assets/categorias/hombre-cosplay.jpeg',
       name: 'Hombre cosplay',
-      path: '#'
+      path: 'productos/hombre'
     },
     {
       img: '../../../assets/categorias/mujer-cosplay.jpeg',
       name: 'Mujer cosplay',
-      path: '#'
+      path: 'productos/mujer'
     },
     {
       img: '../../../assets/categorias/combo-cosplay.jpeg',
       name: 'Combo cosplay',
-      path: '#'
+      path: 'productos/combo'
     },
     {
       img: '../../../assets/categorias/pareja-cosplay.jpeg',
       name: 'Pareja cosplay',
-      path: '#'
+      path: 'productos/pareja'
     },
   ];
 }

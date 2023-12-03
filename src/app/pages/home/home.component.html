@@ -4,7 +4,7 @@
     [slidesPerView]="4"
     >
         <swiper-slide  *ngFor="let categoria of categorias">
-            <div>
+            <div (click)="nav(categoria.path)">
                 <div class="circulo">
                     <img class="foto" src="{{categoria.img}}">
                 </div>
@@ -14,12 +14,16 @@
         </swiper-slide>
     </swiper-container>
 </div>
+
 <div class="content">
+    
     <div class="articulos">
+        
         <div class="container">
+            <h1>Más relevantes</h1>
             <div class="row">
                 <div class="col-md-3" *ngFor="let item of products">
-                    <div class="card">
+                    <div class="card" (click)="nav('producto/'+item.id)">
                         <div class="imagen-mostrar">
                             <img class="imagen-ajuste" src="{{item.img}}">
                         </div>
