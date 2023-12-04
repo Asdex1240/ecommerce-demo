@@ -1,6 +1,20 @@
 <div class="content">
-    
-        <div class="row">
+
+    <swiper-container
+    #mySwiper
+    [pagination]="true"
+    >
+        <swiper-slide *ngFor="let slide of slides">
+            <div style="width: 100px; height: 100px; background-color: red;">
+                <h1>{{slide}}</h1>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+
+    <button (click)="addNumber()" class="btn btn-dark btn-block">Agregar</button>
+    <button (click)="deleteNumber()" class="btn btn-dark btn-block">Eliminar</button>
+        
+    <div class="row">
             <div class="col-md-6">
                 <div class="image-container">
                     <img src="../../../assets/historia/historia.jpeg">
