@@ -5,10 +5,12 @@
     >
         <swiper-slide  *ngFor="let categoria of categorias">
             <div (click)="nav(categoria.path)">
-                <div class="circulo">
-                    <img class="foto" src="{{categoria.img}}">
+                <div style="display: flex; justify-content: center;">
+                    <div class="circulo">
+                        <img class="foto" src="{{categoria.img}}">
+                    </div>    
                 </div>
-                <p>{{categoria.name}}</p>
+                <p style="text-align: center;">{{categoria.name}}</p>
             </div>
             
         </swiper-slide>
@@ -23,14 +25,13 @@
             <h1>Más relevantes</h1>
             <div class="row">
                 <div class="col-md-3" *ngFor="let item of products">
-                    <div class="card" (click)="nav('producto/'+item.id)">
+                    <div class="card border-0" (click)="nav('producto/'+item.id)">
                         <div class="imagen-mostrar">
                             <img class="imagen-ajuste" src="{{item.img}}">
                         </div>
                         
                         <div class="card-body text-center">
                           <h5 class="card-title">{{item.title}}</h5>
-                          <p class="card-text">{{item.description}}</p>
                           <p class="card-text">${{item.price}} MXN</p>
                         </div>
                       </div>   

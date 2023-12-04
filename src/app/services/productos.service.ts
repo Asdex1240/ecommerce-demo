@@ -12,7 +12,12 @@ export class ProductosService {
       id: 1,
       img: '../../../assets/cosplays/naruto.png',
       title: 'Disfraz naruto',
-      description: 'Disfraz de naruto para joven',
+      description: [
+        'Disfraz de naruto para joven',
+        'Talla chica',
+        'Hecho a base de algodón',
+        'Hecho en México'
+      ],
       category: 'Cosplay',
       price: 300.00
     },
@@ -20,7 +25,11 @@ export class ProductosService {
       id: 2,
       img: '../../../assets/cosplays/chaqueta.jpg',
       title: 'Chaqueta anime',
-      description: 'Chaqueta talla chica para joven',
+      description: [
+        'Chaqueta talla chica para joven',        
+        'Talla chica',
+        'Hecho a base de algodón',
+        'Hecho en México'],
       category: 'Cosplay',
       price: 250.99
     },
@@ -28,7 +37,12 @@ export class ProductosService {
       id: 3,
       img: '../../../assets/cosplays/coneja.jpg',
       title: 'Disfraz para mujer',
-      description: 'Disfraz para mujer joven',
+      description: [
+        'Disfraz para mujer joven',
+        'Talla chica',
+        'Hecho a base de algodón',
+        'Hecho en México'
+      ],
       category: 'Cosplay',
       price: 550.80
     },
@@ -36,7 +50,12 @@ export class ProductosService {
       id: 4,
       img: '../../../assets/cosplays/lobo.jpg',
       title: 'Mascara de lobo',
-      description: 'Mascara de lobo para joven',
+      description: [
+        'Mascara de lobo para joven',
+        'Talla chica',
+        'Hecho a base de algodón',
+        'Hecho en México'
+    ],
       category: 'Cosplay',
       price: 150.50
     },
@@ -44,7 +63,11 @@ export class ProductosService {
       id: 5,
       img: '../../../assets/cosplays/pokemon.jpg',
       title: 'Disfraz para hombre',
-      description: 'Disfraz de pokemon para hombre',
+      description: [
+        'Disfraz de pokemon para hombre', 
+        'Talla chica',
+        'Hecho a base de algodón',
+        'Hecho en México'],
       category: 'Cosplay',
       price: 700.00
     },
@@ -52,7 +75,12 @@ export class ProductosService {
       id: 6,
       img: '../../../assets/cosplays/uchiha.jpg',
       title: 'Tunica de naruto',
-      description: 'Tunica de naruto para joven',
+      description: [
+        'Tunica de naruto para joven',
+        'Talla chica',
+        'Hecho a base de algodón',
+        'Hecho en México'
+      ],
       category: 'Cosplay',
       price: 760.50
     },
@@ -60,11 +88,18 @@ export class ProductosService {
       id: 7,
       img: '../../../assets/cosplays/wazon.jpg',
       title: 'Disfraz para hombre Batman',
-      description: 'Disfraz para wazon para joven',
+      description: [
+        'Disfraz para wazon para joven',
+        'Talla chica',
+        'Hecho a base de algodón',
+        'Hecho en México'
+      ],
       category: 'Cosplay',
       price: 550.80
     },
-  
-
   ];
+
+  getProductById(id: number): Product | undefined {
+    return this.products.find(product => product.id === id);
+  }
 }
